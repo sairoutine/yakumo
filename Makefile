@@ -1,6 +1,9 @@
 CXX = g++ -Wall
-yakumo: src/main.cpp
-	$(CXX) src/main.cpp -o yakumo
+SRC_DIR = ./src
+SOURCES = $(shell ls $(SRC_DIR)/*.cpp)
+
+yakumo: $(SOURCES)
+	$(CXX) $^ -o yakumo
 clean:
 	rm -f *.a *.so *.o yakumo
 
