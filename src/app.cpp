@@ -46,6 +46,9 @@ namespace yakumo {
 		~app();
 		std::string start_listen();
 		std::string start_workers();
+		int socket_bind(auto_fd& fd, const socket_arguments& sock_args);
+		private:
+			auto_fd listen_fd;
 	};
 	typedef std::auto_ptr<app> app_ptr;
 
@@ -57,7 +60,18 @@ namespace yakumo {
 	}
 	std::string app::start_listen() {
 		std::string err;
+
+		socket_arguments sock_args;
+		if(socket_bind(listen_fd, sock_args) != 0) {
+			err = "socket bind error";
+			return err;
+		}
+
 		return err;
+	}
+	int app::socket_bind(auto_fd& fd, const socket_arguments& sock_args) {
+		// TODO:
+		return 1;
 	}
 	std::string app::start_workers() {
 		std::string err;
