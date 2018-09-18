@@ -24,7 +24,8 @@ Goal: Implement proto for linux operating system
 ### ver 0.2
 Goal: Implement room
 - create/delete room
-- join/leave room
+- join/leave/rejoin room
+- room list
 
 ### ver 0.3
 Goal: Implement object
@@ -34,6 +35,27 @@ Goal: Implement object
 Goal: Implement notification event
 - publish/subscribe event
 - group chat
+
+### ver 0.5
+Goal: Implement match making
+- lobbies
+- group chat
+
+### ver 0.6
+Goal: Implement player
+- friends
+- online/offline status
+
+
+### ver 0.7
+Goal: Implement parties
+
+### ver 0.8
+Goal: Implement ranking
+
+### ver0.9
+Goal: Implement filtering room by status
+- game mode
 
 ## API
 **WIP**
